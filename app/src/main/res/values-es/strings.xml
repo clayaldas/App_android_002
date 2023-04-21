@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">App_android_002</string>
+
+    <string name="textview_text_message">System login</string>
+    <string name="edittext_hint_username">Enter user name</string>
+    <string name="edittext_hint_password">Enter password</string>
+
+    <string name="button_text_ok">OK</string>
+
+    <string name="textView_text_title">Bienvenido</string>
+
+</resources>
