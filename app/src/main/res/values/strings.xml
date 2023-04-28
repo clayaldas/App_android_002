@@ -14,4 +14,6 @@
     <string name="buttonShowListNumbers_text" translatable="false">Mostrar lista de Números</string>
     <string name="buttonFinish_text" translatable="false">Finalizar</string>
 
+    <string name="textView_text_listNumbers" translatable="false">Lista de valores</string>
+
 </resources>

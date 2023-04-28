@@ -20,18 +20,21 @@
         android:id="@+id/buttonShowBrowser"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="onClick_buttonShowBrowser"
         android:text="@string/buttonShowBrowser_text" />
 
     <Button
         android:id="@+id/buttonCallPhone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="onClick_buttonCallPhone"
         android:text="@string/buttonCallPhone_text" />
 
     <Button
         android:id="@+id/buttonShowListNumbers"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="onClick_buttonShowListNumber"
         android:text="@string/buttonShowListNumbers_text" />
 
     <Button
