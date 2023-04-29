@@ -14,6 +14,14 @@
     <string name="buttonShowListNumbers_text" translatable="false">Mostrar lista de Números</string>
     <string name="buttonFinish_text" translatable="false">Finalizar</string>
 
-    <string name="textView_text_listNumbers" translatable="false">Lista de valores</string>
+    <string name= "textView_text_listNumbers" translatable="false">Lista de valores</string>
+
+    <string name= "menu_file" translatable="false">Archivo</string>
+    <string name= "menu_about" translatable="false">Acerca de...</string>
+
+    <string name= "menu_edit" translatable="false">Editar</string>
+    <string name= "menu_edit_cut" translatable="false">Cortar</string>
+    <string name= "menu_edit_copy" translatable="false">Copiar</string>
+    <string name= "menu_edit_paste" translatable="false">Pegar</string>
 
 </resources>
