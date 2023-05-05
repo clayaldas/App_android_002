@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">App_android_002</string>
+    <string name="app_name">Dos</string>
 
     <string name="textview_text_message">Datos de ingreso al sistema</string>
     <string name="edittext_hint_username">Ingrese en el usuario</string>
@@ -23,5 +23,8 @@
     <string name= "menu_edit_cut" translatable="false">Cortar</string>
     <string name= "menu_edit_copy" translatable="false">Copiar</string>
     <string name= "menu_edit_paste" translatable="false">Pegar</string>
+
+    <string name= "menu_options" translatable="false">Opciones</string>
+    <string name= "menu_options_finish" translatable="false">Finalizar</string>
 
 </resources>

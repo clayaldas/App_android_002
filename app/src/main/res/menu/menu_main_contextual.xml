@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/menu_contextual_cut"
+        android:title="@string/menu_edit_cut"
+        android:icon="@android:drawable/ic_dialog_info"
+                          />
+    <item android:id="@+id/menu_contextual_copy"
+        android:title="@string/menu_edit_copy"/>
+    <item android:id="@+id/menu_contextual_paste"
+        android:title="@string/menu_edit_paste"/>
+</menu>

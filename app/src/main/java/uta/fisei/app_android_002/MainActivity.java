@@ -4,6 +4,7 @@ import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,15 +12,19 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.ContextMenu;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private TextView textViewTitle;
     private Button buttonFinish;
+    private LinearLayout linearLayoutMain;
 
    // private int requiredCode = 1;
 
@@ -48,6 +53,8 @@ public class MainActivity extends AppCompatActivity {
         textViewTitle = findViewById(R.id.textViewTitle);
         buttonFinish = findViewById(R.id.buttonFinish);
 
+        linearLayoutMain = findViewById(R.id.linerLayoutMain);
+
         // recibir / obtener los parametros del activity (login)
         Bundle bundle  = this.getIntent().getExtras();
 
@@ -62,6 +69,11 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+       // registerForContextMenu(linearLayoutMain);
+
+        registerForContextMenu(textViewTitle);
+
     }
 
     public void onClick_buttonShowBrowser(View view) {
@@ -106,7 +118,77 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
 
-        //return super.onCreateOptionsMenu(menu);
+        return super.onCreateOptionsMenu(menu);
+        //return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        int id = item.getItemId();
+
+        if (id == R.id.menu_file) {
+            Toast.makeText(this,
+                    "Presiono en: Archivo", Toast.LENGTH_SHORT).show();
+        }
+
+        if (id == R.id.menu_about) {
+            Toast.makeText(this,
+                    "Presiono en: Acerca de...", Toast.LENGTH_SHORT).show();
+        }
+
+        if (id == R.id.menu_edit_cut) {
+            Toast.makeText(this,
+                    "Presiono en: Cortar", Toast.LENGTH_SHORT).show();
+        }
+
+        if (id == R.id.menu_edit_copy) {
+            Toast.makeText(this,
+                    "Presiono en: Copiar", Toast.LENGTH_SHORT).show();
+        }
+
+        if (id == R.id.menu_edit_paste) {
+            Toast.makeText(this,
+                    "Presiono en: Pegar", Toast.LENGTH_SHORT).show();
+        }
+
+        if (id == R.id.menu_options_finish) {
+            finish();
+        }
+        //return super.onOptionsItemSelected(item);
         return true;
+    }
+
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, v, menuInfo);
+
+        getMenuInflater().inflate(R.menu.menu_main_contextual, menu);
+    }
+
+    @Override
+    public boolean onContextItemSelected(@NonNull MenuItem item) {
+
+        int id = item.getItemId();
+
+        if (id == R.id.menu_contextual_cut) {
+            Toast.makeText(this,
+                    "Presiono en menu contextual: cortar",
+                    Toast.LENGTH_SHORT).show();
+        }
+
+        if (id == R.id.menu_contextual_copy) {
+            Toast.makeText(this,
+                    "Presiono en menu contextual: copiar",
+                    Toast.LENGTH_SHORT).show();
+        }
+
+        if (id == R.id.menu_contextual_paste) {
+            Toast.makeText(this,
+                    "Presiono en menu contextual: pegar",
+                    Toast.LENGTH_SHORT).show();
+        }
+
+        return super.onContextItemSelected(item);
     }
 }

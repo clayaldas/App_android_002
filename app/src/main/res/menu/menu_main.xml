@@ -30,6 +30,24 @@
     </item>
 
 
+    <item
+        android:id="@+id/menu_options"
+        android:title="@string/menu_options"
+        app:showAsAction="ifRoom">
+
+        <menu>
+            <group>
+                <item android:id="@+id/menu_options_finish"
+                    android:title="@string/menu_options_finish"
+                    android:icon="@android:drawable/ic_dialog_info"
+                    app:showAsAction="ifRoom"                    />
+
+            </group>
+
+        </menu>
+    </item>
+
+
     <item android:id="@+id/menu_about" android:title="@string/menu_about"
         app:showAsAction="never"/>
 
